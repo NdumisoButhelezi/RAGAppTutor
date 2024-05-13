@@ -15,33 +15,128 @@
         <RelativeLayout
             android:id="@+id/topBarRelativeLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
 
             <ImageView
                 android:id="@+id/rightNavigationDrawerIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                tools:srcCompat="@drawable/right_navigation_drawer_button" />
 
             <ImageView
                 android:id="@+id/leftNavigationDrawerIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="false"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                tools:srcCompat="@drawable/left_navigation_drawer_button" />
+
+            <RelativeLayout
+                android:id="@+id/roomNameBackground"
+                android:layout_width="256dp"
+                android:layout_height="51dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/rounded_background_room_name"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp">
+
+                <TextView
+                    android:id="@+id/roomNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/untitled_room"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
 
         </RelativeLayout>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/responseGenerationProgressBar"
+            android:layout_width="match_parent"
+            android:Layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_height="wrap_content" />
+
+        <ScrollView
+            android:id="@+id/chatHistoryBody"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/chatBodyContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
 
         <RelativeLayout
-            android:id="@+id/roomNameBackground"
+            android:id="@+id/promptRelativeLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:background="@color/light_bg">
 
-            <TextView
-                android:id="@+id/roomNameTextView"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        app:endIconMode="clear_text">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="hint" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/uploadeFilesButton"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/add_plus_new_2_svgrepo_com"
+                        tools:srcCompat="@drawable/add_plus_new_2_svgrepo_com" />
+
+                    <ImageButton
+                        android:id="@+id/sendQueryButton"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        tools:srcCompat="@drawable/send_svgrepo_com" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
         </RelativeLayout>
+
     </LinearLayout>
+
 
 </androidx.drawerlayout.widget.DrawerLayout>
