@@ -44,7 +44,7 @@
                 android:layout_height="51dp"
                 android:layout_centerInParent="true"
                 android:background="@drawable/rounded_background_room_name"
-                android:paddingStart="5dp"
+                android:paddingStart="10dp"
                 android:paddingEnd="5dp">
 
                 <TextView
@@ -59,17 +59,6 @@
 
         </RelativeLayout>
 
-        <com.google.android.material.progressindicator.LinearProgressIndicator
-            android:id="@+id/responseGenerationProgressBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:Layout_height="wrap_content"
-            android:indeterminate="true"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:visibility="gone"
-            tools:visibility="visible" />
-
         <ScrollView
             android:id="@+id/chatHistoryBody"
             android:layout_width="match_parent"
@@ -80,7 +69,19 @@
                 android:id="@+id/chatBodyContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" />
+                android:orientation="vertical" >
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/responseGenerationProgressBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:Layout_height="wrap_content"
+                    android:indeterminate="true"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="10dp"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+            </LinearLayout>
         </ScrollView>
 
         <RelativeLayout
@@ -126,6 +127,7 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:background="@drawable/circle_button"
+                        android:visibility="visible"
                         tools:srcCompat="@drawable/add_plus_new_2_svgrepo_com" />
 
                     <ImageButton
@@ -133,6 +135,7 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:background="@drawable/circle_button"
+                        android:visibility="gone"
                         tools:srcCompat="@drawable/send_svgrepo_com" />
 
                 </RelativeLayout>
