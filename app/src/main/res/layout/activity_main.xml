@@ -5,6 +5,9 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/top_border"
+    android:foregroundGravity="center"
+    app:layout_anchorGravity="center"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -16,8 +19,9 @@
             android:id="@+id/topBarRelativeLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:drawable/bottom_bar"
             android:paddingStart="10dp"
-            android:paddingEnd="10dp">
+            android:paddingEnd="5dp">
 
             <ImageView
                 android:id="@+id/rightNavigationDrawerIcon"
@@ -69,7 +73,7 @@
                 android:id="@+id/chatBodyContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <com.google.android.material.progressindicator.LinearProgressIndicator
                     android:id="@+id/responseGenerationProgressBar"
@@ -93,6 +97,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/top_border"
                 android:orientation="horizontal"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp">
@@ -126,6 +131,7 @@
                         android:id="@+id/uploadeFilesButton"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
+                        android:layout_centerInParent="true"
                         android:background="@drawable/circle_button"
                         android:visibility="visible"
                         tools:srcCompat="@drawable/add_plus_new_2_svgrepo_com" />
@@ -134,6 +140,7 @@
                         android:id="@+id/sendQueryButton"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
+                        android:layout_centerInParent="true"
                         android:background="@drawable/circle_button"
                         android:visibility="gone"
                         tools:srcCompat="@drawable/send_svgrepo_com" />
