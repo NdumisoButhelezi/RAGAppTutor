@@ -62,11 +62,13 @@
         <com.google.android.material.progressindicator.LinearProgressIndicator
             android:id="@+id/responseGenerationProgressBar"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:Layout_height="wrap_content"
             android:indeterminate="true"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:visibility="gone"
-            tools:visibility="visible"
-            android:layout_height="wrap_content" />
+            tools:visibility="visible" />
 
         <ScrollView
             android:id="@+id/chatHistoryBody"
@@ -90,7 +92,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
 
                 <RelativeLayout
                     android:layout_width="0dp"
@@ -121,13 +125,14 @@
                         android:id="@+id/uploadeFilesButton"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/add_plus_new_2_svgrepo_com"
+                        android:background="@drawable/circle_button"
                         tools:srcCompat="@drawable/add_plus_new_2_svgrepo_com" />
 
                     <ImageButton
                         android:id="@+id/sendQueryButton"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
+                        android:background="@drawable/circle_button"
                         tools:srcCompat="@drawable/send_svgrepo_com" />
 
                 </RelativeLayout>

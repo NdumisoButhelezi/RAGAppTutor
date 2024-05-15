@@ -5,4 +5,11 @@
     <color name="grey">#D3D3D3</color>
     <color name="light_bg">#F0F0F0</color>
     <color name="pale_grey_light">#FFE4E4E4</color>
+        <color name="yellow_900">#FFB517</color>
+        <color name="yellow_700">#FFBC20</color>
+        <color name="yellow_600">#FFBD35</color>
+        <color name="yellow_500">#FFB638</color>
+        <color name="yellow_300">#FFF176</color>
+        <color name="yellow_100">#FFF9C4</color>
+
 </resources>
