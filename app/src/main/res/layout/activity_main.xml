@@ -5,7 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/top_border"
     android:foregroundGravity="center"
     app:layout_anchorGravity="center"
     tools:context=".MainActivity">
@@ -18,8 +17,8 @@
         <RelativeLayout
             android:id="@+id/topBarRelativeLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:drawable/bottom_bar"
+            android:layout_height="73dp"
+            android:background="@drawable/top_border"
             android:paddingStart="10dp"
             android:paddingEnd="5dp">
 
@@ -48,8 +47,7 @@
                 android:layout_height="51dp"
                 android:layout_centerInParent="true"
                 android:background="@drawable/rounded_background_room_name"
-                android:paddingStart="10dp"
-                android:paddingEnd="5dp">
+                android:paddingTop="5dp">
 
                 <TextView
                     android:id="@+id/roomNameTextView"
@@ -67,7 +65,10 @@
             android:id="@+id/chatHistoryBody"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="5dp">
 
             <LinearLayout
                 android:id="@+id/chatBodyContainer"
@@ -81,10 +82,10 @@
                     android:layout_height="wrap_content"
                     android:Layout_height="wrap_content"
                     android:indeterminate="true"
-                    android:paddingTop="7dp"
+                    android:paddingTop="1dp"
                     android:paddingBottom="10dp"
                     android:visibility="gone"
-                    tools:visibility="visible" />
+                    tools:visibility="gone" />
             </LinearLayout>
         </ScrollView>
 
@@ -129,9 +130,8 @@
 
                     <ImageButton
                         android:id="@+id/uploadeFilesButton"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:layout_centerInParent="true"
+                        android:layout_width="53dp"
+                        android:layout_height="53dp"
                         android:background="@drawable/circle_button"
                         android:visibility="visible"
                         tools:srcCompat="@drawable/add_plus_new_2_svgrepo_com" />
@@ -152,6 +152,25 @@
         </RelativeLayout>
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/uploadFilesIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/please_upload_files" />
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/leftNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start" />
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/rightNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end" />
 
 
 </androidx.drawerlayout.widget.DrawerLayout>
